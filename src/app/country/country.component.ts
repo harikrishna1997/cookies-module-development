@@ -27,8 +27,7 @@ export class CountryComponent implements OnInit {
       this.dropdownList = res
     }   
     });
-  
-    console.log(this.dropdownList)
+
     this.dropdownSettings = {
       singleSelection: false,
       textField: 'country_name',
@@ -39,8 +38,7 @@ export class CountryComponent implements OnInit {
       allowSearchFilter: true
     };
   }
-  send()
-  {
+  private send(){
     this.service.postservice(this.selectedItems)
     .subscribe((res) => {
       this.validate();
@@ -54,8 +52,7 @@ export class CountryComponent implements OnInit {
   OnItemDeSelect(item:any){}
   onDeSelectAll(items: any){}
    
-validate()
-{
+private validate(){
   this.router.navigate([`/validate` ]);
 
 }

@@ -14,14 +14,14 @@ export class ValidateComponent implements OnInit {
   constructor(private service: ServiceService,private http: HttpClient) { }
 
   ngOnInit() {
-    this.service.getService({responseType: 'text'})
-    .subscribe((response) => {
-      if(response)  
-     {
-      this. jsObj = JSON.parse(response);
+    // // this.service.getService({responseType: 'text'})
+    // // .subscribe((response) => {
+    // //   if(response)  
+    // //  {
+    // //   this. jsObj = JSON.parse(response);
   
-     }
-     });
+    //  }
+    //  });
      
   }
 }

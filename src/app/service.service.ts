@@ -12,6 +12,7 @@ private getURL:string="http://localhost:8080/validate";
 private postURL:string="https://6386b0f8.ngrok.io/add";
 private getDataURL:string="./assets/mydata.json";
   ipDetails: any;
+
 constructor(private http: HttpClient) { }
 
 public getService() {

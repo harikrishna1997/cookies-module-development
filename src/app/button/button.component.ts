@@ -14,7 +14,7 @@ export class ButtonComponent implements OnInit {
   }
   get()
   {
-   this.service.getService("")
+   this.service.getService()
     .subscribe( (response:any) => {
     
       if(response){
