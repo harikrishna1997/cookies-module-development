@@ -1,3 +1,110 @@
-<p>
-  cookiebanner works!
-</p>
+<div class="parent">
+    <div class="child1">
+
+
+    </div>
+    
+    <div class="child2">
+            Use Template<br>
+            <label class="switch"><br>
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  
+      <div style='overflow:scroll; width:400px;height:400px;' class="grandChild1">
+                <div  >
+                    <button *ngIf="isCollapsed1" (click)="toggleCollapse('layout')" >Layout</button>
+                    <button *ngIf="!isCollapsed1" (click)="toggleCollapse('layout')" >-</button>
+                   <div *ngIf="!isCollapsed1">
+                   
+                    <!-- <div style='overflow:scroll; width:400px;height:400px;' class="buttons"> -->
+                    <div class="bottombardark">
+                        <input type="image" class="imgbutton" src="../../assets/images/bottombardark.jpg" alt="alt" width="130px" height="90px" (click)="bottom_Bar_dark_theme()">Bottom bar Dark Theme
+                    </div>
+                    <div class="bottombarlight">
+                        <input type="image" class="imgbutton" src="../../assets/images/bottombarlight.jpg" alt="alt" width="130px" height="90px" (click)="bottom_Bar_light_theme()">Bottom Bar Light Theme
+                    </div>
+                    <div class="topbardark">
+                        <input type="image" class="imgbutton" src="../../assets/images/topbardark.jpg" alt="alt" width="130px" height="90px" (click)="top_Bar_dark_theme()">Top bar Dark Theme
+                    </div>
+                     <div class="topbarlight">
+                        <input type="image" class="imgbutton" src="../../assets/images/bottombardark.jpg" alt="alt" width="130px" height="90px" (click)="top_Bar_light_theme()">Top bar Light Theme
+                    </div>
+                    </div>
+                </div>
+             <div >
+                <button *ngIf="isCollapsed2" (click)="toggleCollapse('colors')" >Colors</button>
+                <button *ngIf="!isCollapsed2" (click)="toggleCollapse('colors')" >-</button>
+                <div *ngIf="!isCollapsed2">
+                        <div class="inputColor"> 
+                        <div style="float:left;" ><p>Button</p>
+                            <input type="color" value="#9fd6ff" id="buttonInput" (change)="fetchForbutton(this)" >
+                            <input type="text" id="buttonText" value="#9fd6ff" width="300px"/><br />
+                        </div>
+                        <div style="float:left;"><p>Background</p>
+                            <input type="color" value="#3be282" id="backgroundInput" (change)="fetchForbackground(this)">
+                            <input type="text" id="backgroundText" value="#3be282"/><br />
+                        </div>
+                        <div style="float:left;"><P>Text</P>
+                            <input type="color" value="#ffffff" id="textInput" (change)="fetchFortext(this)">
+                            <input type="text" id="textText"value="#ffffff" /><br />
+                        </div>
+                     </div>
+                    </div>  
+            </div>
+            
+             <div>
+                    <button *ngIf="isCollapsed3" (click)="toggleCollapse('content')" >Content</button>
+                    <button *ngIf="!isCollapsed3" (click)="toggleCollapse('content')" >-</button>
+                    <div *ngIf="!isCollapsed3">
+                        <div>
+                            <p>Cookie Banner Heading</p>
+                            <input type="text" id="contentHeading" [(ngModel)]="contentHeading"><br>
+
+                        </div>
+                        <div>
+                            <p>Cookie Banner</p>
+                            <input  type="text" value= {{content}} [(ngModel)]="content" id ="content" > 
+                        </div>
+
+                        <div>
+                            <p>Cookie Policy Link</p>
+                            <input  type="text"  id ="policyLink" [(ngModel)]="policyLink"> 
+
+                        </div>
+                        <input type="submit" id="save"(click)="contentSave()">
+
+                     </div> 
+              </div> 
+     </div>  
+          
+      
+      
+      <div class="grandChild2">
+          <div class="preview">
+              <img src="../../assets/images/preview.jpg" alt="preview image" width = "500" height = "300">
+          </div>
+          <div class="banner"[ngStyle]="style" [style.background-color]="backgroundColor">
+
+              <div class="banner_words"[style.color]="textColor" >
+                  <p id="contentHeading">{{contentHeading}}</p>  
+                <p id="words" >
+                      {{content}}
+                 </p>
+              </div>
+              <div>
+                <a href="https://www.w3schools.com">{{policyLink}}</a>
+          </div>
+              <div class="banner_accept" [style.background-color]="buttonColor">
+                  <p id ="text">Accept Cookies</p>
+              </div>
+             
+              <div class="banner_close">
+                  <button type="button">X</button>            
+              </div>            
+          </div>
+      </div>
+      
+      
+    </div>
+</div>

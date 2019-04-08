@@ -12,21 +12,21 @@ export class ButtonComponent implements OnInit {
   constructor(private service: ServiceService,private route:ActivatedRoute,private router:Router) { }
   ngOnInit() {
   }
-  get()
-  {
-   this.service.getService()
-    .subscribe( (response:any) => {
+  // get()
+  // {
+  //  this.service.getService()
+  //   .subscribe( (response:any) => {
     
-      if(response){
-        this.service.ipDetails = response;
-        this.log();
-      };
-    }
-    , (error) => {
-      alert('Error connecting to IP API');
-    }
-    );
-  }
+  //     if(response){
+  //       this.service.ipDetails = response;
+  //       this.log();
+  //     };
+  //   }
+  //   , (error) => {
+  //     alert('Error connecting to IP API');
+  //   }
+  //   );
+  // }
   
   log()
   {

@@ -1,13 +1,124 @@
-button{
-    background-color:cornflowerblue;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: start;
-    text-decoration: none;
-    font-size: 12px;
-    cursor: pointer;
-    border-radius:40px;
-    margin-top: 5%;
-    margin-left: 60%;
+.parent{ 
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top:60px;
+    left:152px;
+    width:100%;
+    height: 1000px;
+    margin-left: 50px;
 }
+#r{
+  margin-left: 200px;
+}
+#resp{
+  width:85%;
+}
+#demo{
+
+  color: white;
+ 
+  border-radius: 40px;
+ 
+  padding-top: 1px;
+ 
+  padding-bottom: 1px;
+ 
+  padding-right: 1px;
+ 
+  padding-left: 1px;
+ 
+  width: 150px;
+ 
+  text-align: center;
+ 
+ }
+ .Add_Website{
+
+     background-color:cornflowerblue;
+     color: white;
+     height: 30px;
+     width: 110px;
+     padding: 15px 25px 25px 15px;
+     text-align: justify;
+     font-size: 11px;
+     cursor: pointer;
+     border-radius:40px;
+
+ }
+.division1{
+    display: flex;
+    flex-wrap: wrap;
+   background-color:rgba(255, 253, 253, 0.781);
+    height: 50px;
+    width:1070px;
+    align-items: stretch;
+    justify-content:space-between ;
+    flex-direction: row;
+    position: absolute;
+}
+.division2{
+    height: 50px;
+    width:100%;
+    background-color:rgba(255, 253, 253, 0.781); 
+    margin-top: 5px;
+}
+input{
+    position: relative;
+    border-radius:40px;
+    margin-top: 7px;
+    margin-left: 60%;
+    height:25px;
+}
+.division3{
+    width:100%;
+    margin-top: 5px;
+    background-color:rgba(255, 253, 253, 0.781); 
+    height: 100%;
+
+}
+#demo{
+    color: white;
+    border-radius: 40px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+    width: 150px;
+    text-align: center;
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 2px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }

@@ -38,13 +38,13 @@ export class CountryComponent implements OnInit {
       allowSearchFilter: true
     };
   }
-  private send(){
-    this.service.postservice(this.selectedItems)
-    .subscribe((res) => {
-      this.validate();
-     });
+  // private send(){
+  //   this.service.postservice(this.selectedItems)
+  //   .subscribe((res) => {
+  //     this.validate();
+  //    });
     
-  }
+  // }
   
   onItemSelect(item: any){console.log(item)}
   

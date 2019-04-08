@@ -1,0 +1,65 @@
+<popup class="pop" >
+    <div id="pop">
+        <form [formGroup] = "form" (ngSubmit) = "onSubmit(form.value)">
+               <div class="Website URL">
+                <label><strong>Website URL:</strong></label>
+                <input type="text" name="Name" formControlName="domain" placeholder="Name" [(ngModel)]="WebsiteName" (input)="checkEmpty()" required>
+             </div>
+            <div class="Organization">
+                <label><strong>Organisation:</strong></label>
+                <input class="org" name="org" required/>
+            </div>
+            <br>
+            <div>
+                <button (click)="toggle()" id="collapsible" >Advanced Settings</button>
+            </div>
+            <br>
+            <div class="content" *ngIf="show">
+                <br>
+                <label class="scan">Limit scan to <input type="number" [disabled]="isDisabled1" formControlName="pages" placeholder="100" > Pages</label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round" (click)="ToggleButton1()"></span>
+                </label>
+                <br>
+                <label>Limit to this path within site</label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>      
+                <br>
+                <br>
+                <label>Clear previous scan history</label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>      
+            
+                <br>
+                <br>
+                <label>Scan pages with query parameters</label>
+                <br>
+                <input type="text" name="paramscan">
+                <br>
+                <label>Target pages to scan</label>
+                <br>
+                <input type="number" name="targetpages">
+                <br>
+                <label>Sitemaps URIs</label>
+                <br>
+                <input type="text" name="sitemapsURIs">
+    
+            </div>
+            <br>
+            <br>
+            <div class="botbut">
+                <br>
+                <br>
+                <br>
+                <button type="Cancel" (click)="cancelButton()">Cancel</button>
+                <button [disabled]="isDisabled2" >Start Scan</button>
+            </div>
+        </form>
+    </div>
+    </popup>
+<button (click)="ClickButton()">Add Website</button>

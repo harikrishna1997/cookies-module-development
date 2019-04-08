@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
-import {WebsitesComponent} from '../websites/websites.component';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -14,7 +13,11 @@ export class SidebarComponent implements OnInit {
   }
 public websites()
 {
-  console.log("HHHHH")
   this.router.navigate([`/websites`]);
+}
+public cookiebanner()
+{
+  this.router.navigate([`/cookiebanner`]);
+
 }
 }
